@@ -1,0 +1,12 @@
+syntax="proto3";
+option java_package="ma.enset.stubs";
+service GuessingGame{
+  rpc guess(stream MessageRequest) returns (stream MessageResponse);
+}
+message MessageRequest{
+  string name=1;
+  int32 number=2;
+}
+message MessageResponse{
+  string respond=1;
+}
